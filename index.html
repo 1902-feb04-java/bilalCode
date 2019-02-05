@@ -1,0 +1,166 @@
+<!-- HTML syntax for comments -->
+<!-- Ctrl+/ to toggle comment/uncomment -->
+
+
+ 
+<!DOCTYPE html> <!--Document type declaration-->
+
+<html><!--HTML element, root element for the entire file-->
+<head><!--HEAD element, for metadata, data about the document's contents-->
+    <meta charset="utf-8" /><!--type of encoding for char-->
+    <!--ASCII encoding baseline-->
+    <!--Unicode is a namespace of characters-->
+    <!--"utf-8" is the standard encoding for Unicode-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Wassup</title><!--Name of tab/window-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--defines some initial display paramaters for mobile-->
+
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" /><!--import an external stylesheet, or CSS file-->
+
+    <script src="main.js"></script><!--import an external script, or Javascript file-->
+
+    <!-- keywords: used to be used for SEO - search-engine optimization -->
+
+    <!-- robots: used to define what directories search engines ignore -->
+</head>
+<body><!--BODY element, the page contents themselves-->
+    Hello, World?
+
+    <h1>Heading 1</h1>
+    <p>A Paragraph goes here</p>
+
+    <img src=""><!--img elements don't necessarily need to be closed-->
+    <!--can also point to remotely-hosted images at some http:// address-->
+    <!--or point to locally hosted images with a relative path-->
+
+
+    <a href="http:google.com">Link to Google</a> <!--<a> = anchor tag, for hyperlinks-->
+    
+    <a href="http:google.com"target="_blank">Link to Google in a new tab</a><!-- target="_blank" added to open up in a new tab-->
+
+    <ol> <!--Ordered list-->
+        <li> <!--list item-->
+            Item1
+        </li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ol>
+<br> <!--br = line break-->
+    <ul> <!--Unordered list-->
+        <li> <!--list item-->
+            Item1
+        </li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ul>
+
+    <p>Emphasize<em>this</em></p><!--defined by the website, and italic as default, the text is emphasized-->
+
+    <p><b>"Strong"</b>text</p>
+
+    <p><u>Underlined</u>text</p>
+
+    <blockquote>Indented (by default) quotation of some kind</blockquote> <!--In HTML, we have block and inline elements. Block elements "own" their own vertical space. (ex. p, h1, ol, li, blockquote) Inline elements can share vertical space. (ex. br, em, strong, u, img, a)-->
+
+    <div>
+        Div is a generic block elemtn for anything that doesn't already hava tag defined
+    </div>
+
+    <span>
+        span is a generic inline element for when there's no tag for that
+    </span>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>value 1</td>
+            <td>value 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>&lt;</p>
+    <!--Character references = tell the browser to render a character without literally having it in this file-->
+    <!--sometimes called HTML codes-->
+
+    <br>
+    <select> <!--"select" = dropdown list-->
+        <option>option1</option>
+        <option>option2</option>
+        <option>option3</option>
+        <option>option4</option>
+    </select>
+
+    <!-- NEW ELEMENTS -->
+    <!-- most of these were plugins back in the day. Now these are native elements in HTML5-->
+    <!-- can specify more than one source file, with different codecs, let the browser download the one it can play -->
+    <!-- transcription support -->
+    <video></video> 
+    <audio></audio>
+    <canvas></canvas><!--used for things like Flash games and interactivity-->
+    <!-- area of screen to draw "graphics primitives" onto, allowing some dynamic behavior-->
+
+
+    <!-- accessibility big focus for HTML -->
+    <!-- ex. many Aria attributes to help screen readers -->
+    <!-- "alt" attribute for alternate txt when image can't be loaded/displayed-->
+    
+
+    <section></section>
+    <article></article>
+    <header></header>
+    <footer></footer>
+    <aside></aside>
+    <nav></nav>
+
+
+    <form method="GET" action="https://google.com/search"><!--in basic HTTP, you have GET method and POST method-->
+        <!-- GET requests have only a url -->
+        <!-- typically forms use POST and send key-value -->
+        <!-- pairs to the server in the HTTP request body -->
+        <input type="text" name="q"><!--this sets a query string, this one is called 'q' because this is what Google uses-->
+        <input type="submit">
+<!-- input elemens provide a keyvalue pair to the form as a whole to be submitted, the key will be from the "name" attribute -->
+    </form>
+    <br>
+
+<form method="POST"> <!--send data to the server-->
+    <label for "num">Enter Number:</label>
+    <input type="number" name="num" id="num">
+
+<!-- In HTML, for an attribute without a value, the value is the attribute -->
+    <label>Check if true:
+        <input type="checkbox" name="bool"></label>>
+    <input type="submit">
+
+    <input type="text" name="username" placeholder="Username" required="required"></input>
+
+    <input type="password" placeholder="Password" required minlength="6">
+    <input type="date">
+    <input type="submit">
+    <input type="file">
+    <input type="color">
+
+    <label>
+        Option 1: <input type="radio" name="which" value="1">
+    </label>
+
+
+</form>
+
+    <br>
+    
+
+
+
+</body>
+</html>
