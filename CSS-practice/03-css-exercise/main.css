@@ -1,0 +1,27 @@
+main {
+    border-style:solid;
+    border-color:brown;
+    padding: 15px;
+    width: 460px; 
+    background-color: lightyellow;
+}
+
+img {
+    width: 350px;
+    height: 100px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: orange;
+    
+}
+
+div {
+    overflow: scroll;
+    border-color: orange;
+    border-style: dashed;
+    border-width: 8px;
+    background-color: yellow;
+    width:350px;
+    height:200px;
+
+}
