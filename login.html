@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="mainLogin.css" />
+    <script src="mainLogin.js"></script>
+</head>
+<body>
+    <h1>Please Login:</h1>
+    <br>
+
+    <form method="post" id="login">
+        <input type="text" name="username" placeholder="Username" required minlength="6" id="user">
+        <br>
+        <input type="password" name="password" placeholder="Password" id="pw">
+        <input type="submit" name="Login" id="login"> 
+    </form>
+    
+    <br>
+    
+    <br>
+
+    <form method="post" id="new_user">
+        <input type="text" name="username" placeholder="New Username" required minlength="6" id="newUser">
+        <br>
+        <input type="password" name="password" placeholder="New Password" required minlength="6" id="newPass">
+        <input type="submit" name="Register" id="register"> 
+    </form>
+
+</body>
+</html>
