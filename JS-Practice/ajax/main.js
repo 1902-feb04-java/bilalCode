@@ -7,12 +7,13 @@ document.addEventListener('DOMContentLoaded', ()=> {
     let jokeButton = document.getElementById('joke-button');
 
     jokeButton.addEventListener('click', ()=> {
-        let jokeText = getJoke();
-        jokeHeader.textContent = jokeText;
+        getJoke(text => {
+        jokeHeader.textContent = text;
+        }); 
     });
 });
 
-function getJoke() {
+function getJoke(onSuccess,onFailure) {
     //AJAX stands for asynchorous JS and XML
     // means HTTP requests through JS
     let xhr = new XMLHttpRequest();
@@ -22,7 +23,21 @@ function getJoke() {
         if (xhr.readyState ===4) {
             let responseJSON = xhr.response;
             console.log(responseJSON);
-            if(xhr.status >= 200 && xhr.status < 300);
-        }
-    })
+            if(xhr.status >= 200 && xhr.status < 300){
+                console.log('Success');
+                let responseObj=JSON.parse(responseJSON);
+                let text = responseObj.value.joke;
+
+                onSuccess(text);
+            }
+            else {
+                console.log('Failure');
+                
+            }
+            };
+        
+    });
+
+    xhr.open('get', 'http:api.icndb.com/jokes/random/');
+    xhr.send();
 }

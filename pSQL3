@@ -1,0 +1,25 @@
+--DML: dat manipulation language
+--has 5 statements in PostgreSQL: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, TABLE
+--the purpose of DML is to interact on a row-by-row basis. for wholesome modification of tables, we use other statements (DDL)
+
+--INSERT, will add a row to the table
+SELECT * FROM customers;
+INSERT INTO genres(name) VALUES('Misc 1');
+INSERT INTO genres(id, name) VALUES(27, 'Misc 2');
+
+--id column in this case has a default configured, so we can leave it blank, otherwise, unprovided values are set to null
+--if the column doesn't allow NULL and has no default, you do have to provide a value
+INSERT INTO genres(name) VALUES
+	('Misc 3'),
+	('Misc 4');
+
+DELETE FROM GENRES
+WHERE genres.id=27;
+
+--UPDATE
+UPDATE genres SET name = 'Miscellaneous 1',
+WHERE name = 'Misc 1';
+
+
+UPDATE customers SET first_name = 'Robert', last_name = 'Walter'
+WHERE first_name = 'Aaron', last_name = 'Mitchell'
